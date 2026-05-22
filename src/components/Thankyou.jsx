@@ -1,6 +1,6 @@
 import thankYouIcon from '../assets/images/icon-thank-you.svg'
 
-function ThankYou() {
+function Thankyou() {
   return (
     <div className='thank-you'>
       <img
