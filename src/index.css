@@ -1,0 +1,697 @@
+/* =========================
+   FONT
+========================= */
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Ubuntu';
+}
+
+body {
+  background: hsl(217, 100%, 97%);
+}
+
+/* =========================
+   APP
+========================= */
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 940px;
+  height: 600px;
+
+  background: white;
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+  display: flex;
+  gap: 100px;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 274px;
+  height: 568px;
+
+  position: relative;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+}
+
+/* BACKGROUND IMAGE */
+
+.sidebar-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* CONTENT ON IMAGE */
+
+.sidebar-content {
+  position: absolute;
+
+  top: 40px;
+  left: 32px;
+
+  z-index: 10;
+}
+
+/* STEP */
+
+.sidebar-step {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-bottom: 32px;
+}
+
+/* NUMBER CIRCLE */
+
+.circle {
+  width: 35px;
+  height: 35px;
+
+  border: 1px solid white;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ACTIVE STEP */
+
+.active {
+  background: hsl(206, 94%, 87%);
+
+  color: hsl(213, 96%, 18%);
+
+  border: none;
+}
+
+/* TEXT */
+
+.step-details p {
+  color: hsl(231, 11%, 63%);
+
+  font-size: 12px;
+
+  margin-bottom: 4px;
+
+  letter-spacing: 1px;
+}
+
+.step-details h4 {
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  width: 450px;
+
+  padding-top: 40px;
+}
+
+.title {
+  color: hsl(213, 96%, 18%);
+
+  font-size: 32px;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.description {
+  color: hsl(231, 11%, 63%);
+
+  font-size: 16px;
+
+  line-height: 25px;
+
+  margin-bottom: 35px;
+}
+
+/* =========================
+   STEP 1
+========================= */
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+
+  color: hsl(213, 96%, 18%);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  height: 48px;
+
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 8px;
+
+  padding-left: 16px;
+
+  color: hsl(213, 96%, 18%);
+
+  font-size: 16px;
+  font-weight: 500;
+
+  outline: none;
+}
+
+input::placeholder {
+  color: hsl(231, 11%, 63%);
+}
+
+input:focus {
+  border-color: hsl(243, 100%, 62%);
+}
+
+/* =========================
+   STEP 2
+========================= */
+
+.plans {
+  display: flex;
+
+  gap: 18px;
+}
+
+.plan-card {
+  width: 138px;
+  height: 160px;
+
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+
+  padding: 20px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.plan-card:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+
+.active-plan {
+  background: hsl(217, 100%, 97%);
+
+  border-color: hsl(243, 100%, 62%);
+}
+
+.plan-card img {
+  margin-bottom: 40px;
+}
+
+.plan-card h3 {
+  color: hsl(213, 96%, 18%);
+
+  font-size: 16px;
+
+  margin-bottom: 8px;
+}
+
+.plan-card p {
+  color: hsl(231, 11%, 63%);
+
+  font-size: 14px;
+}
+
+/* =========================
+   TOGGLE
+========================= */
+
+.toggle-container {
+  width: 100%;
+  height: 48px;
+
+  background: hsl(217, 100%, 97%);
+
+  border-radius: 10px;
+
+  margin-top: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 24px;
+}
+
+.toggle-container span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.active-billing {
+  color: hsl(213, 96%, 18%);
+}
+
+.inactive-billing {
+  color: hsl(231, 11%, 63%);
+}
+
+/* =========================
+   STEP 3
+========================= */
+
+.addons {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.addon-card {
+  width: 100%;
+  height: 82px;
+
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+
+  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.addon-card:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+
+.active-addon {
+  background: hsl(217, 100%, 97%);
+
+  border-color: hsl(243, 100%, 62%);
+}
+
+.addon-left {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+}
+
+.addon-left input {
+  width: 18px;
+  height: 18px;
+}
+
+.addon-text h4 {
+  color: hsl(213, 96%, 18%);
+
+  font-size: 16px;
+
+  margin-bottom: 4px;
+}
+
+.addon-text p {
+  color: hsl(231, 11%, 63%);
+
+  font-size: 14px;
+}
+
+.addon-price {
+  color: hsl(243, 100%, 62%);
+
+  font-size: 14px;
+}
+
+/* =========================
+   STEP 4
+========================= */
+
+.summary-box {
+  background: hsl(217, 100%, 97%);
+
+  border-radius: 10px;
+
+  padding: 24px;
+
+  margin-top: 30px;
+}
+
+.summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid hsl(229, 24%, 87%);
+}
+
+.summary-top h3 {
+  color: hsl(213, 96%, 18%);
+}
+
+.summary-price {
+  color: hsl(213, 96%, 18%);
+
+  font-weight: 700;
+}
+
+.change-btn {
+  border: none;
+  background: transparent;
+
+  color: hsl(231, 11%, 63%);
+
+  text-decoration: underline;
+
+  cursor: pointer;
+
+  margin-top: 6px;
+}
+
+.summary-addons {
+  margin-top: 20px;
+}
+
+.summary-addon {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.summary-addon p {
+  color: hsl(231, 11%, 63%);
+}
+
+.summary-addon span {
+  color: hsl(213, 96%, 18%);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px;
+}
+
+.total p {
+  color: hsl(231, 11%, 63%);
+}
+
+.total h2 {
+  color: hsl(243, 100%, 62%);
+
+  font-size: 32px;
+}
+
+/* =========================
+   THANK YOU
+========================= */
+
+.thank-you {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.thank-you img {
+  margin-bottom: 32px;
+}
+
+.thank-you h1 {
+  color: hsl(213, 96%, 18%);
+
+  margin-bottom: 16px;
+}
+
+.thank-you p {
+  color: hsl(231, 11%, 63%);
+
+  line-height: 25px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation {
+  margin-top: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.next-btn,
+.confirm-btn {
+  width: 123px;
+  height: 48px;
+
+  border: none;
+  border-radius: 8px;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.next-btn {
+  background: hsl(213, 96%, 18%);
+}
+
+.confirm-btn {
+  background: hsl(243, 100%, 62%);
+}
+
+.next-btn:hover,
+.confirm-btn:hover {
+  opacity: 0.8;
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+
+  color: hsl(231, 11%, 63%);
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  color: hsl(213, 96%, 18%);
+}
+/* ADD THIS CSS */
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+}
+
+.error-text {
+  color: hsl(354, 84%, 57%);
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.error-input {
+  border-color: hsl(354, 84%, 57%);
+}
+/* THANK YOU */
+
+.thank-you {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding-top: 100px;
+}
+
+.thank-you img {
+  margin-bottom: 32px;
+}
+
+.thank-you h1 {
+  color: hsl(213, 96%, 18%);
+
+  font-size: 32px;
+
+  margin-bottom: 16px;
+}
+
+.thank-you p {
+  color: hsl(231, 11%, 63%);
+
+  line-height: 26px;
+
+  max-width: 450px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .app {
+    align-items: flex-start;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+
+    flex-direction: column;
+
+    padding: 0;
+
+    background: transparent;
+
+    box-shadow: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 172px;
+
+    border-radius: 0;
+  }
+
+  .sidebar-content {
+    width: 100%;
+
+    top: 32px;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 16px;
+  }
+
+  .sidebar-step {
+    margin-bottom: 0;
+  }
+
+  .step-details {
+    display: none;
+  }
+
+  .content {
+    width: 90%;
+
+    margin: -70px auto 0;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 32px 24px;
+  }
+
+  .plans {
+    flex-direction: column;
+  }
+
+  .plan-card {
+    width: 100%;
+    height: 77px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+  }
+
+  .plan-card img {
+    margin-bottom: 0;
+  }
+
+  .navigation {
+    width: 100%;
+
+    background: white;
+
+    padding: 16px;
+
+    margin-top: 40px;
+  }
+}
